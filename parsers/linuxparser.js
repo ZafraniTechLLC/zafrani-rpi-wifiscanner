@@ -21,12 +21,12 @@ function cellLinesToJSON(cellLines) {
 }
 
 function findSignal(line){
-    const signalPattern = /Signal level= (\d+)/gi
+    const signalPattern = /Signal level=(-\d+)/gi
     return signalPattern.test(line);
 }
 
 function extractSignal(line){
-    const signalPattern = /Signal level= (\d+)/gi
+    const signalPattern = /Signal level=(-\d+)/gi
     return signalPattern.exec(line)[1];
 }
 
