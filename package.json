@@ -1,18 +1,15 @@
 {
-  "author": "Andrew Chalkley <andrew@chalkley.org> (http://forefront.io)",
-  "name": "wifiscanner",
-  "description": "A simple Node.js WiFi Scanner",
+  "author": "David Zafrani <david@zafrani.tech> (http://zafrani.tech)",
+  "name": "zafrani-rpi-wifiscanner",
+  "description": "A simple Node.js WiFi Scanner for Raspberry Pi 3",
   "keywords": [
     "wifi",
     "scanner",
-    "windows",
-    "linux",
-    "mac",
     "wireless",
     "raspberry pi",
     "beagle bone"
   ],
-  "version": "1.0.1",
+  "version": "1.0.0",
   "engines": {
     "node": ">=4"
   },
@@ -28,7 +25,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/thingsSDK/wifiscanner/raw/master/LICENCE"
+      "url": "https://github.com/zafarnitechllc/zafrani-rpi-wifiscanner/raw/master/LICENCE"
     }
   ],
   "main": "index.js",

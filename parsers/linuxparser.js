@@ -15,8 +15,19 @@ function cellLinesToJSON(cellLines) {
         ssid:       cellLines.filter(findSsid).map(extractSsid)[0],
         mac:        cellLines.filter(common.findMac).map(common.extractMac)[0],
         channel:    cellLines.filter(findChannel).map(extractChannel)[0],
-        security:   cellLines.filter(findSecurity).map(extractSecurity)
+        security:   cellLines.filter(findSecurity).map(extractSecurity),
+        signal:   cellLines.filter(findSignal).map(extractSignal)[0]
     };
+}
+
+function findSignal(line){
+    const signalPattern = /Signal level= (\d+)/gi
+    return signalPattern.test(line);
+}
+
+function extractSignal(line){
+    const signalPattern = /Signal level= (\d+)/gi
+    return signalPattern.exec(line)[1];
 }
 
 function findSsid(line) {
